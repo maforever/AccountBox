@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+     >
+    
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/tool_bar" 
+	    >
+	    <RadioGroup
+	        android:id="@+id/rg"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerInParent="true" 
+	        android:orientation="horizontal"
+	        >
+	        <RadioButton
+	            android:id="@+id/listRb"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="列 表"
+	            android:button="@null"
+	            android:background="@drawable/tab_left_selector"
+	            android:textSize="16dp"
+	            android:checked="true"
+	            android:paddingLeft="8dp"
+	            android:paddingRight="8dp"
+	            android:paddingTop="5dp"
+	            android:paddingBottom="5dp"
+	            />
+	        <RadioButton
+	            android:id="@+id/findRb"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="查 找"
+	            android:button="@null"
+	            android:background="@drawable/tab_right_selector"
+	            android:textSize="16dp"
+	            android:paddingLeft="8dp"
+	            android:paddingRight="8dp"
+	            android:paddingTop="5dp"
+	            android:paddingBottom="5dp"
+	            />
+	    </RadioGroup>
+	    
+	    <TextView
+	        android:id="@+id/add"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/btn_addaccount_selector"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="10dp"
+	        android:layout_centerVertical="true"
+	        android:onClick="btnClick"
+	        android:clickable="true"
+	        android:text="添 加" 
+	        android:textColor="#fff"
+	        android:textSize="16dp"
+	        android:gravity="center"
+	        android:paddingLeft="5dp"
+	        android:paddingRight="5dp"
+	        android:paddingTop="2dp"
+	        android:paddingBottom="2dp"
+	               />
+	    
+	</RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        >
+        <RelativeLayout
+                    android:id="@+id/emptyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff" 
+                    android:onClick="btnClick"
+            >
+            <ImageView
+                android:id="@+id/emptyImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/empty"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:text="无信息，点击开始添加!"
+                android:textColor="#cccccc" 
+                android:textSize="20dp"
+                android:layout_below="@+id/emptyImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                />
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" 
+            >
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/orange" 
+                >
+                <TextView
+                    android:text="已保存账户数:" 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:layout_alignParentRight="true"
+						android:layout_centerVertical="true"
+						android:textSize="15dp"   
+						android:padding="3dp"    
+						android:layout_marginRight="20dp"              
+                    />
+            </RelativeLayout>
+            
+            
+            <ExpandableListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:listSelector="#00000000"
+            android:divider="@null"
+            android:cacheColorHint="#00000000"
+            android:fadingEdge="none"
+            android:groupIndicator="@null"
+            android:dividerHeight="1dp"
+            android:childDivider="#fff"
+            >
+            
+        </ExpandableListView>
+        </LinearLayout>
+        
+    </FrameLayout>
+    
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff" 
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_generic" >
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_btn_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="btnClick"
+            android:text="返回"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="添加类别"
+            android:textColor="#fff"
+            android:textSize="22dp" />
+        
+        <TextView
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_blue_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="btnClick"
+            android:text="完成"
+            android:textColor="#fff"
+            android:textSize="16dp"
+            android:layout_marginRight="10dp" 
+            />
+    </RelativeLayout>
+		
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical" 
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+        android:background="@drawable/orange_txt_input"
+        android:padding="5dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:id="@+id/seletedImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@color/orange"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                />
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:gravity="right" 
+                android:background="@null"
+                android:textColor="#000"
+                android:textSize="20dp"
+                android:hint="类别名称"
+                />
+        </LinearLayout>
+        
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="5"
+            android:background="@drawable/orange_txt_input"
+            android:layout_marginTop="20dp"
+            android:verticalSpacing="3dp"
+            android:horizontalSpacing="3dp"
+            android:listSelector="#00000000"
+            android:padding="3dp"
+            />
+        
+    </LinearLayout>
+    
+    
+    
+</LinearLayout>
